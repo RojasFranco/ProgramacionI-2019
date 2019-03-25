@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1553455669 source:c:\users\franco rojas\desktop\programacion i\ej hechos en clase\ej_0000\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+
