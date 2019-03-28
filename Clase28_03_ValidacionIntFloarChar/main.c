@@ -9,16 +9,8 @@ int isValidInt(int numero, int minimo, int maximo);
 int main()
 {
     int numeroIngresado;
-    int errorDeIngreso;
-    errorDeIngreso = getInt("Ingrese el numero", "Error", 0 , 50, 2, &numeroIngresado);
-    if (errorDeIngreso)
-    {
-        printf("Se ha ingresado algo invalido");
-    }
-    else
-    {
-        printf("El numero ingresado es: %d", numeroIngresado);
-    }
+    getInt("Ingrese el numero", "Error", 0 , 50, 2, &numeroIngresado);
+    printf("El numero ingresado es: %d", numeroIngresado);
     return 0;
 }
 
@@ -48,14 +40,14 @@ int getInt(char *mensaje, char *mensajeError, int minimo, int maximo, int reinte
             if (isValidInt(buffer, minimo, maximo))
             {
                 *resultado = buffer;
-                return retorno;
-                break; // para no seguir iterando
+                retorno=0;
+                break;
             }
             else
             {
-                printf("%s", mensajeError)
+                printf("%s", mensajeError);
             }
         }
-        retorno = 0; //para cambiar el retorno
     }
+    return retorno;
 }
