@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1553819330 source:/home/alumno/ProgramacionI-2019/Clase28_03_ValidacionIntFloarChar/main.c
+	<stdio.h>
+	<stdlib.h>
+
