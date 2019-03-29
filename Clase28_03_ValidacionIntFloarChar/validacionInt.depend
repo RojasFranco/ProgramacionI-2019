@@ -1,5 +1,13 @@
 # depslib dependency file v1.0
-1553819330 source:/home/alumno/ProgramacionI-2019/Clase28_03_ValidacionIntFloarChar/main.c
+1553821680 source:/home/alumno/ProgramacionI-2019/Clase28_03_ValidacionIntFloarChar/main.c
 	<stdio.h>
 	<stdlib.h>
+	"utn.h"
+
+1553821677 /home/alumno/ProgramacionI-2019/Clase28_03_ValidacionIntFloarChar/utn.h
+
+1553821673 source:/home/alumno/ProgramacionI-2019/Clase28_03_ValidacionIntFloarChar/utn.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
 
