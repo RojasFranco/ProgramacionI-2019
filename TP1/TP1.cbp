@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Clase28_03" />
+		<Option title="TP1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Clase28_03" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/TP1" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Clase28_03" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/TP1" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -34,14 +34,15 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="utn.c">
+		<Unit filename="tp1.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="utn.h" />
+		<Unit filename="tp1.h" />
 		<Extensions>
-			<code_completion />
-			<debugger />
 			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
