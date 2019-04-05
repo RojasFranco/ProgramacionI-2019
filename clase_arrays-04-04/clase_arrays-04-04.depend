@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1554421437 source:/home/alumno/ProgramacionI-2019/clase_arrays-04-04/utn.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1554413460 /home/alumno/ProgramacionI-2019/clase_arrays-04-04/utn.h
+
+1554421725 source:/home/alumno/ProgramacionI-2019/clase_arrays-04-04/main.c
+	<stdio.h>
+	<stdlib.h>
+
