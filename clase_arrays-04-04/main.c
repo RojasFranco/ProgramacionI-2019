@@ -61,3 +61,4 @@ void printArrayInt(int* arrayResultado, int limite)
         printf("%d\n", arrayResultado[i]);
     }
 }
+
