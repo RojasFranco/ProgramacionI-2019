@@ -22,15 +22,15 @@ int utn_getNumber(char* mensaje, char* Error,int minimo, int maximo, int reinten
         if(utn_getString(mensaje, error, 1, 16 , reintentos, buffer))==0)
         {
             if(utn_isValidNumber(buffer))
+            {
                 bufferInt= atoi(buffer); /// convierte el string a int
                 if(bufferInt >= minimo && bufferInt <= maximo)
                 {
                     *resultado=bufferInt;
                     retorno=0;
                 }
-
+            }
         }
-
     }
 
     return retorno;
