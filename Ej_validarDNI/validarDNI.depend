@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1555173333 source:/home/franco/Escritorio/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1555173333 /home/franco/Escritorio/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.h
+
+1555376250 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarDNI/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validarDNI.h"
+
+1555376250 /home/franco/Escritorio/ProgramacionI-2019/Ej_validarDNI/validarDNI.h
+
+1555376272 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarDNI/validarDNI.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validarDNI.h"
+

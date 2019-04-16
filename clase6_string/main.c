@@ -18,7 +18,6 @@
     ///strlen() mide string
     ///strcmp() compara tamaño de las cadenas
 **/
-
 int validarNombre(char *buffer);
 int main()
 {

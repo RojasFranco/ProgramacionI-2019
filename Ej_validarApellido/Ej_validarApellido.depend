@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1555173333 source:/home/franco/Escritorio/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1555173333 /home/franco/Escritorio/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.h
+
+1555285556 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarApellido/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validarApellido.h"
+
+1555285577 /home/franco/Escritorio/ProgramacionI-2019/Ej_validarApellido/validarApellido.h
+
+1555286448 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarApellido/validarApellido.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validarApellido.h"
+

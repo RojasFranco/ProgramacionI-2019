@@ -17,9 +17,9 @@ int utn_getNumber(char* mensaje, char* Error,int minimo, int maximo, int reinten
     int retorno=-1;
     char buffer[18]; /// podria pasar 16 (la misma cantidad
     int bufferInt;
-    if (mensaje!=NULL && error!=NULL && maximo>minimo)
+    if (mensaje!=NULL && Error!=NULL && maximo>minimo)
     {
-        if(utn_getString(mensaje, error, 1, 16 , reintentos, buffer))==0)
+        if((utn_getString(mensaje, Error, 1, 16 , reintentos, buffer))==0)
         {
             if(utn_isValidNumber(buffer))
             {
