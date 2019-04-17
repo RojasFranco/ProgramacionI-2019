@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1555453394 source:/home/alumno/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1555453394 /home/alumno/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.h
+
+1555462117 source:/home/alumno/ProgramacionI-2019/clase8-/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1555453394 source:/home/alumno/ProgramacionI-2019/clase8-/utn.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1555453394 /home/alumno/ProgramacionI-2019/clase8-/utn.h
+
