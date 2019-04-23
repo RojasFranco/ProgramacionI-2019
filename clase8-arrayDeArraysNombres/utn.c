@@ -20,7 +20,7 @@ int getString ( char* msg,
             printf("%s",msg);
             fgets(bufferStr,sizeof(bufferStr),stdin);
             bufferStr[strlen(bufferStr)-1] = '\0';
-            if(strlen(bufferStr)>=minimo && strlen(bufferStr) <maximo)
+            if(strlen(bufferStr)>minimo && strlen(bufferStr) <maximo)
             {
                 strncpy(resultado,bufferStr,maximo);
                 retorno = 0;

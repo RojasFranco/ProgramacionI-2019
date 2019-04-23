@@ -15,13 +15,13 @@ int printArray(char arrayStr[][50], int limite) ///no recibe puntero porque reci
     return 0;
 }
 
-int main()
+int brindarMenu(void)
 {
-    ///char auxName[500] ="test";
-
     char arrayNombres[QTY_EMPLEADOS][50];
     inicializarArray(arrayNombres, QTY_EMPLEADOS);
     printArray(arrayNombres, QTY_EMPLEADOS);
+    char nuevoNombre[50];
+    int posicionBuscada;
     int opcionSeleccionada;
     ///int i;
     /*
@@ -31,32 +31,60 @@ int main()
     */
     do
     {
-        printf("Seleccione opcion:\n1-Agregar\n2-Modificar\n3-Eliminar\n4-ordenar\n5-salir");
+        printf("\nMenu\n1-Agregar\n2-Modificar\n3-Eliminar\n4-ordenar\n5-salir\nSeleccione opcion:");
         scanf("%d",&opcionSeleccionada);
+        __fpurge(stdin);
         if(opcionSeleccionada==1)
         {
-            int posicion=encontrarPosicionVacia(arrayNombres, QTY_EMPLEADOS);
-            if (posicion>=0)
+            posicionBuscada=encontrarPosicionVacia(arrayNombres, QTY_EMPLEADOS);
+            ///printf("%d", posicion);
+            if (posicionBuscada>=0)
             {
-                escribirNombre(arrayNombres, posicion);
+                escribirNombre(arrayNombres, posicionBuscada);
             }
             else
             {
-                printf("no hay posicion vacia");
+                printf("no hay posicion vacia\n");
             }
         }
         if(opcionSeleccionada==2)
         {
-            if(esNombreRepetido(char arrayStr[][50], int limite, char* nuevoNombre))
+            posicionBuscada=esUnNombreYaIngresado(arrayNombres, QTY_EMPLEADOS);
+            if(posicionBuscada>=0)
             {
-
+                getName("Ingrese nuevo nombre:", "Nombre invalido", 2, 50, 2, nuevoNombre);
+                strncpy(arrayNombres[posicionBuscada], nuevoNombre, 50);
+            }
+            else
+            {
+                printf("el nombre no se encuentra\n");
             }
         }
         if(opcionSeleccionada==3)
         {
+            posicionBuscada=esUnNombreYaIngresado(arrayNombres, QTY_EMPLEADOS);
+            if(posicionBuscada>=0)
+            {
+                strncpy(arrayNombres[posicionBuscada], "\0", 50);
+            }
+            else
+            {
+                printf("el nombre no se encuentra\n");
+            }
+        }
+        if(opcionSeleccionada==4)
+        {
+            ordenarArray(arrayNombres, QTY_EMPLEADOS);
         }
         printArray(arrayNombres, QTY_EMPLEADOS);
-    } while(opcionSeleccionada!=4);
+    } while(opcionSeleccionada!=5);
+    return 0;
+}
+
+int main()
+{
+    ///char auxName[500] ="test";
+    brindarMenu();
     return 0;
 }
 
@@ -72,9 +100,19 @@ int inicializarArray(char arrayStr[][50], int limite)
 
 int escribirNombre(char arrayStr[][50], int posicionLibre)
 {
-    char bufferStr[QTY_EMPLEADOS];
-    getName("Ingrese nombre", "nombre invalido", 2, QTY_EMPLEADOS, 2 , bufferStr);
-    strncpy(arrayStr[posicionLibre], bufferStr, 50);
+    char bufferStr[50];
+    int retorno=-1;
+    if(!getName("Ingresa tu nombre:", "nombre invalido", 2, 50, 2, bufferStr))
+    {
+        ///printf("el nombre es: %s", bufferStr);
+        strncpy(arrayStr[posicionLibre], bufferStr, 50);
+        retorno=0;
+    }
+    else
+    {
+        printf("el nombre es incorrecto\n");
+    }
+    return retorno;
 }
 ///inicializo , creo vacio, luego escribo.
 int encontrarPosicionVacia(char arrayStr[][50], int limite)
@@ -92,17 +130,43 @@ int encontrarPosicionVacia(char arrayStr[][50], int limite)
     return retorno;
 }
 
-int esNombreRepetido(char arrayStr[][50], int limite, char* nuevoNombre)
+int esUnNombreYaIngresado(char arrayStr[][50], int limite)
 {
     int i;
-    int retorno=0;
+    int retorno=-1;
+    char nuevoNombre[50];
+    getName("Ingrese nombre a modificar:", "el nombre es invalido\n", 2 , 50, 2, nuevoNombre);
     for(i=0; i<limite; i++)
     {
-        if(strcmp(nuevoNombre, arrayStr[i]))
+        if(strcmp(nuevoNombre, arrayStr[i])==0)
         {
-            retorno=1;
+            retorno=i;
             break;
         }
     }
     return retorno;
+}
+
+int ordenarArray(char arrayNombres[][50], int limite)
+{
+    int i;
+    char nombreAuxiliar[50];
+    int flagSwap;
+    do
+    {
+        for(i=0; i<limite-1; i++)
+        {
+            if(strcmp(arrayNombres[i],arrayNombres[i+1])>0)
+            {
+                strcpy(nombreAuxiliar, arrayNombres[i]);
+                strcpy(arrayNombres[i], arrayNombres[i+1]);
+                strcpy(arrayNombres[i+1], nombreAuxiliar);
+                flagSwap=1;
+            }
+            else
+            {
+                flagSwap=0;
+            }
+        }
+    }while(flagSwap);
 }

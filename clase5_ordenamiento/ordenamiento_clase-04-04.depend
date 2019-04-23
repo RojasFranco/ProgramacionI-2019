@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1555891252 source:/home/franco/Escritorio/ProgramacionI-2019/clase5_ordenamiento/main.c
+	<stdio.h>
+	<stdlib.h>
+	"ordenamiento.h"
+
+1555891226 /home/franco/Escritorio/ProgramacionI-2019/clase5_ordenamiento/ordenamiento.h
+
