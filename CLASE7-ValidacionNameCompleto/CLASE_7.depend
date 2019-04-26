@@ -12,3 +12,16 @@
 	<stdlib.h>
 	"utn.h"
 
+1556228561 source:/home/alumno/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1556228561 /home/alumno/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.h
+
+1556228561 source:/home/alumno/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+

@@ -4,7 +4,7 @@
 
 int utn_getString(char* mensaje, char* Error,int minimo, int maximo, int reintentos, char* resultado);
 int utn_isValidNumber(char *str);
-int utn_getNumber(char* mensaje, char* Error,int minimo, int maximo, int reintentos, int resultado);
+int utn_getNumber(char* mensaje, char* Error,int minimo, int maximo, int reintentos, int* resultado);
 
 int main()
 {
@@ -12,7 +12,7 @@ int main()
     return 0;
 }
 
-int utn_getNumber(char* mensaje, char* Error,int minimo, int maximo, int reintentos, int resultado)
+int utn_getNumber(char* mensaje, char* Error,int minimo, int maximo, int reintentos, int* resultado)
 {
     int retorno=-1;
     char buffer[18]; /// podria pasar 16 (la misma cantidad
