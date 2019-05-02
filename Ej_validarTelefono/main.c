@@ -5,8 +5,8 @@
 
 int main()
 {
-    int* telefono;
-    if(!getTelefono("Ingresa tu telefono", "nro invalido", 6, 14, 2, &telefono))
+    int telefono;
+    if(!getTelefono("Ingresa tu telefono", "nro invalido", 2, 5, 2, &telefono))
     {
         printf("telefono: %d", telefono);
     }

@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1553821522 source:/home/alumno/ProgramacionI-2019/Clase28_03_ValidacionIntFloarChar/validacionChar/main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1553821400 /home/alumno/ProgramacionI-2019/Clase28_03_ValidacionIntFloarChar/validacionChar/utn.h
+
+1556750346 source:/home/franco/Escritorio/ProgramacionI-2019/Clase3-ValidacionIntFloarChar/validacionChar/main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1556747198 /home/franco/Escritorio/ProgramacionI-2019/Clase3-ValidacionIntFloarChar/validacionChar/utn.h
+
+1556750347 source:/home/franco/Escritorio/ProgramacionI-2019/Clase3-ValidacionIntFloarChar/validacionChar/utn.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	<string.h>
+
+1556750346 source:/home/franco/Escritorio/ProgramacionI-2019/EJ_validacionChar/main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1556750904 /home/franco/Escritorio/ProgramacionI-2019/EJ_validacionChar/utn.h
+
+1556750904 source:/home/franco/Escritorio/ProgramacionI-2019/EJ_validacionChar/utn.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	<string.h>
+

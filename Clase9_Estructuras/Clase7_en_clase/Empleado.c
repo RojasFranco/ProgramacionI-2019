@@ -3,8 +3,8 @@
 #include "utn.h"
 #include "Empleado.h"
 
-
-int emp_initArray(Empleado array[], int limite)
+//int emp_initArray(Empleado array[], int limite)
+int emp_initArray(Empleado* array, int limite)
 {
     int i;
     for(i=0 ; i<limite; i++)
@@ -16,6 +16,7 @@ int emp_initArray(Empleado array[], int limite)
     return 0;
 }
 
+/*
 int emp_lugarLibreArray(Empleado array[], int limite, int* indice)
 {
     int i;
@@ -24,7 +25,4 @@ int emp_lugarLibreArray(Empleado array[], int limite, int* indice)
         if(array[i])
     }
 }
-
-
-
-
+*/

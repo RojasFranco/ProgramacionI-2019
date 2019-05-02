@@ -34,3 +34,25 @@
 
 1556063767 /home/alumno/ProgramacionI-2019/Clase7_en_clase_paraclase9/Clase7_en_clase/Empleado.h
 
+1556496303 source:/home/franco/Escritorio/ProgramacionI-2019/Clase9_Estructuras/Clase7_en_clase/Empleado.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"Empleado.h"
+
+1556222854 /home/franco/Escritorio/ProgramacionI-2019/Clase9_Estructuras/Clase7_en_clase/utn.h
+
+1556497015 /home/franco/Escritorio/ProgramacionI-2019/Clase9_Estructuras/Clase7_en_clase/Empleado.h
+
+1556222854 source:/home/franco/Escritorio/ProgramacionI-2019/Clase9_Estructuras/Clase7_en_clase/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1556494472 source:/home/franco/Escritorio/ProgramacionI-2019/Clase9_Estructuras/Clase7_en_clase/main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"Empleado.h"
+

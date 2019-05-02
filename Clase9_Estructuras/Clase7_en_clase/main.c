@@ -53,8 +53,6 @@ pEmpleado->apellido;
 
 
 
-
-
 int buscarLibre(char lista[][20],
                 int len,
                 int* pIndex)

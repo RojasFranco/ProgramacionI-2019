@@ -4,7 +4,6 @@
 #include <string.h>
 #include "empleado.h"
 #include "funciones_string.h"
-
 #define CANTEMPLEADOS 10
 
 int main()

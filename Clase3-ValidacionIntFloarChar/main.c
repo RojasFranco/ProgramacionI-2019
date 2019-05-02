@@ -12,3 +12,4 @@ int main()
     printf("El numero ingresado es: %d", numeroIngresado);
     return 0;
 }
+

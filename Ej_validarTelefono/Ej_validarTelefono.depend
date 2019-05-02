@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1555173333 source:/home/franco/Escritorio/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.c
+1556734905 source:/home/franco/Escritorio/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -7,7 +7,7 @@
 
 1555173333 /home/franco/Escritorio/ProgramacionI-2019/CLASE7-ValidacionNameCompleto/utn.h
 
-1555372593 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarTelefono/main.c
+1556734694 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarTelefono/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -15,7 +15,7 @@
 
 1555373076 /home/franco/Escritorio/ProgramacionI-2019/Ej_validarTelefono/validarTelefono.h
 
-1555372535 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarTelefono/validarTelefono.c
+1555373060 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarTelefono/validarTelefono.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

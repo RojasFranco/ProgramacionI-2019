@@ -141,3 +141,32 @@
 	"empleado.h"
 	"funciones_string.h"
 
+1556496487 source:/home/franco/Escritorio/ProgramacionI-2019/clase10_/empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"funciones_string.h"
+	"empleado.h"
+
+1556493030 /home/franco/Escritorio/ProgramacionI-2019/clase10_/funciones_string.h
+	"empleado.h"
+
+1556493030 /home/franco/Escritorio/ProgramacionI-2019/clase10_/empleado.h
+
+1556493030 source:/home/franco/Escritorio/ProgramacionI-2019/clase10_/funciones_string.c
+	<stdio.h>
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"funciones_string.h"
+
+1556496537 source:/home/franco/Escritorio/ProgramacionI-2019/clase10_/main.c
+	<stdio.h>
+	<ctype.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+	"funciones_string.h"
+

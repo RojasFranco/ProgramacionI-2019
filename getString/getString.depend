@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1556730502 source:/home/franco/Escritorio/ProgramacionI-2019/getString/getstring.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"getstring.h"
+
+1556730471 /home/franco/Escritorio/ProgramacionI-2019/getString/getstring.h
+
+1556730516 source:/home/franco/Escritorio/ProgramacionI-2019/getString/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"getstring.h"
+

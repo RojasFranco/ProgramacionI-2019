@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1556732350 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarDireccion/getstring.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"getstring.h"
+
+1556731842 /home/franco/Escritorio/ProgramacionI-2019/Ej_validarDireccion/getstring.h
+
+1556732495 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarDireccion/main.c
+	<stdio.h>
+	<stdlib.h>
+	"getDireccion.h"
+
+1556732481 source:/home/franco/Escritorio/ProgramacionI-2019/Ej_validarDireccion/getDireccion.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"getDireccion.h"
+
+1556731842 /home/franco/Escritorio/ProgramacionI-2019/Ej_validarDireccion/getDireccion.h
+

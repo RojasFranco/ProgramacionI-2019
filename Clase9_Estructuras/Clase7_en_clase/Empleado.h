@@ -1,5 +1,6 @@
 #ifndef EMPLEADO_H_INCLUDED
 #define EMPLEADO_H_INCLUDED
+
 typedef struct
 {
     int idEmpleado;
@@ -7,7 +8,8 @@ typedef struct
     char nombre[50];
 }Empleado;
 
-int emp_initArray(Empleado array[], int limite); ///(Empleado array[] porque es estructura)
+int emp_initArray(Empleado* array, int limite);
+//int emp_initArray(Empleado array[], int limite); ///(Empleado array[] porque es estructura)
 int emp_lugarLibreArray(Empleado array[], int limite, int* indice);
 int emp_alta(Empleado array[], int limite, int id);
 int emp_baja(Empleado array[], int limite);

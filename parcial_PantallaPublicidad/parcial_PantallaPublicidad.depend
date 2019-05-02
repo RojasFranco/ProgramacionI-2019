@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1556755652 source:/home/franco/Escritorio/ProgramacionI-2019/parcial_PantallaPublicidad/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"pantalla.h"
+
+1556750643 /home/franco/Escritorio/ProgramacionI-2019/parcial_PantallaPublicidad/utn.h
+
+1556755652 /home/franco/Escritorio/ProgramacionI-2019/parcial_PantallaPublicidad/pantalla.h
+
+1556751253 source:/home/franco/Escritorio/ProgramacionI-2019/parcial_PantallaPublicidad/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"pantalla.h"
+
+1556755652 source:/home/franco/Escritorio/ProgramacionI-2019/parcial_PantallaPublicidad/pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"pantalla.h"
+	<string.h>
+

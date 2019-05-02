@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1556493030 source:/home/franco/Escritorio/ProgramacionI-2019/clase6_Validaciones/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
