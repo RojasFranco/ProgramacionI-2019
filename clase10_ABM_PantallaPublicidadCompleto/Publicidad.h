@@ -8,7 +8,7 @@ typedef struct
     int dias;
     int isEmpty; ///1vacio - 0ocupado
     int idPublicidad; ///clave unica de identidad univoca
-    /*int idPantalla; ///completar*/
+    int idPantalla; ///completar
 }Publicidad;
 
 int pub_initPublicidad(Publicidad* pPublicidad,int len);

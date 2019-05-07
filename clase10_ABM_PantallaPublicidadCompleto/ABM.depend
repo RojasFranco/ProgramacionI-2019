@@ -175,3 +175,39 @@
 	"Publicidad.h"
 	"utn_strings.h"
 
+1557196868 source:/home/franco/Escritorio/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn_strings.h"
+	"Pantalla.h"
+	"Publicidad.h"
+
+1557196868 /home/franco/Escritorio/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/utn_strings.h
+
+1557199656 /home/franco/Escritorio/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Pantalla.h
+
+1557199600 /home/franco/Escritorio/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Publicidad.h
+
+1557196868 source:/home/franco/Escritorio/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Pantalla.h"
+	"Publicidad.h"
+	"utn_strings.h"
+
+1557196868 source:/home/franco/Escritorio/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Publicidad.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Pantalla.h"
+	"Publicidad.h"
+	"utn_strings.h"
+
+1557196868 source:/home/franco/Escritorio/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/utn_strings.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn_strings.h"
+

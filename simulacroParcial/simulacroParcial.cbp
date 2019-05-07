@@ -31,12 +31,25 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="asociado.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="asociado.h" />
+		<Unit filename="llamada.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="llamada.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="utn_strings.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="utn_strings.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
