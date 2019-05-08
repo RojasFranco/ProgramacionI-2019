@@ -145,7 +145,7 @@
 
 1556751844 g:\utn\programacion_laboratorio 1\modelos\abm_pantalla\empleado.h
 
-1556832815 source:/home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/main.c
+1557265426 source:/home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -153,13 +153,13 @@
 	"Pantalla.h"
 	"Publicidad.h"
 
-1556832815 /home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/utn_strings.h
+1557265426 /home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/utn_strings.h
 
-1556832814 /home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Pantalla.h
+1557265426 /home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Pantalla.h
 
-1556834883 /home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Publicidad.h
+1557265426 /home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Publicidad.h
 
-1556832814 source:/home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Pantalla.c
+1557265426 source:/home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Pantalla.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -167,7 +167,7 @@
 	"Publicidad.h"
 	"utn_strings.h"
 
-1556832815 source:/home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Publicidad.c
+1557265426 source:/home/alumno/ProgramacionI-2019/clase10_ABM_PantallaPublicidadCompleto/Publicidad.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

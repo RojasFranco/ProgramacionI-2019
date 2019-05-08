@@ -163,10 +163,9 @@ int getStringNumeros (char* pStr, char* msg, char* msgE,int reintentos)
         else
         {
             printf(msgE);
-            //reintentos--;
             retorno=-1;
+            reintentos--;
         }
-
     }
     return retorno;
 }
