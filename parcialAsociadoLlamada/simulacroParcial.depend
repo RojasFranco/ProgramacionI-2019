@@ -23,3 +23,27 @@
 
 1557205476 /home/franco/Escritorio/ProgramacionI-2019/simulacroParcial/asociado.h
 
+1557438848 source:/home/alumno/ProgramacionI-2019/parcialAsociadoLlamada/asociado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"asociado.h"
+	"utn_strings.h"
+
+1557438848 /home/alumno/ProgramacionI-2019/parcialAsociadoLlamada/asociado.h
+
+1557438848 /home/alumno/ProgramacionI-2019/parcialAsociadoLlamada/utn_strings.h
+
+1557438848 source:/home/alumno/ProgramacionI-2019/parcialAsociadoLlamada/llamada.c
+
+1557438848 source:/home/alumno/ProgramacionI-2019/parcialAsociadoLlamada/main.c
+	<stdio.h>
+	<stdlib.h>
+	"asociado.h"
+
+1557438848 source:/home/alumno/ProgramacionI-2019/parcialAsociadoLlamada/utn_strings.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn_strings.h"
+

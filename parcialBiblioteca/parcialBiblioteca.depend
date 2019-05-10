@@ -1,25 +1,25 @@
 # depslib dependency file v1.0
-1557277281 source:/home/alumno/ProgramacionI-2019/parcialBiblioteca/autores.c
+1557438848 source:/home/alumno/ProgramacionI-2019/parcialBiblioteca/autores.c
 	<stdio.h>
 	<stdlib.h>
 	"utn_strings.h"
 	"autores.h"
 
-1557265426 /home/alumno/ProgramacionI-2019/parcialBiblioteca/utn_strings.h
+1557438848 /home/alumno/ProgramacionI-2019/parcialBiblioteca/utn_strings.h
 
-1557270031 /home/alumno/ProgramacionI-2019/parcialBiblioteca/autores.h
+1557438848 /home/alumno/ProgramacionI-2019/parcialBiblioteca/autores.h
 
-1557275833 source:/home/alumno/ProgramacionI-2019/parcialBiblioteca/utn_strings.c
+1557438848 source:/home/alumno/ProgramacionI-2019/parcialBiblioteca/utn_strings.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"utn_strings.h"
 
-1557275309 source:/home/alumno/ProgramacionI-2019/parcialBiblioteca/main.c
+1557438848 source:/home/alumno/ProgramacionI-2019/parcialBiblioteca/main.c
 	<stdio.h>
 	<stdlib.h>
 	"utn_strings.h"
 	"autores.h"
 
-1557276339 source:/home/alumno/ProgramacionI-2019/parcialBiblioteca/libros.c
+1557438848 source:/home/alumno/ProgramacionI-2019/parcialBiblioteca/libros.c
 
