@@ -219,3 +219,92 @@
 
 1557449398 /home/alumno/ProgramacionI-2019/Parcial_Modelo_libros/libro.h
 
+1557535298 source:/home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/autor.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"autor.h"
+	"libro.h"
+
+1557535298 /home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/utn.h
+
+1557535298 /home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/autor.h
+
+1557604083 /home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/libro.h
+
+1557535298 source:/home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/fantasma.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557535298 /home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/fantasma.h
+
+1557535298 source:/home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/informes.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557606862 source:/home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/libro.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"autor.h"
+	"libro.h"
+
+1557713173 source:/home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+	"autor.h"
+	"libro.h"
+	"socio.h"
+	"fecha.h"
+
+1557695919 source:/home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"autor.h"
+	"libro.h"
+
+1557696314 source:/home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/socio.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"autor.h"
+	"libro.h"
+	"socio.h"
+
+1557713406 /home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/socio.h
+	"fecha.h"
+
+1557711940 source:/home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/fecha.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fecha.h"
+
+1557709181 /home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/fecha.h
+
+1557712525 source:/home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/prestamo.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"prestamo.h"
+	"fecha.h"
+
+1557712325 /home/franco/Escritorio/ProgramacionI-2019/Parcial_Modelo_libros/prestamo.h
+	"fecha.h"
+

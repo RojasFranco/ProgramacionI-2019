@@ -23,7 +23,7 @@ int libro_buscarString(Libro array[], int size, char* valorBuscado, int* indice)
 int libro_alta(Libro array[], Autor arrayAutor[], int sizeAutor, int size, int* contadorID);                          //cambiar libro                          //cambiar libro
 int libro_baja(Libro array[], int sizeArray);                                      //cambiar libro
 int libro_bajaValorRepetidoInt(Libro array[], int sizeArray, int valorBuscado);
-int libro_modificar(Libro array[], int sizeArray);                                //cambiar libro
+int libro_modificar(Libro array[], Autor arrayAutor[], int sizeArrayAutor, int sizeArray);                           //cambiar libro
 int libro_ordenarPorDobleCriterio(Libro array[],int size, int orderFirst, int orderSecond);                                  //cambiar libro
 int libro_listar(Libro array[], int size);                      //cambiar libro
 void libro_mock(Libro arrayLibro[], int size,int *contadorId);                      //cambiar libro

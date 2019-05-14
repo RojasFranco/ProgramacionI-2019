@@ -156,3 +156,34 @@
 	<string.h>
 	"utn.h"
 
+1557599575 source:/home/franco/Escritorio/ProgramacionI-2019/Fantasma_v4/fantasma.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557535298 /home/franco/Escritorio/ProgramacionI-2019/Fantasma_v4/utn.h
+
+1557535298 /home/franco/Escritorio/ProgramacionI-2019/Fantasma_v4/fantasma.h
+
+1557535298 source:/home/franco/Escritorio/ProgramacionI-2019/Fantasma_v4/informes.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557599631 source:/home/franco/Escritorio/ProgramacionI-2019/Fantasma_v4/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"fantasma.h"
+
+1557695987 source:/home/franco/Escritorio/ProgramacionI-2019/Fantasma_v4/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+

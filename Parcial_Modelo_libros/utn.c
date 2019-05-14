@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "utn.h"
+#include "autor.h"
+#include "libro.h"
 
 /*
 getString
@@ -35,7 +37,7 @@ int getString(char* msg, char* msgError, int min, int max, int* reintentos, char
         do
         {
             printf("%s",msg);   //no poner salto de linea, se va a pasar en el mensaje por valor
-            //fflush(stdin);
+            __fpurge(stdin);//fflush(stdin);
             fgets(bufferStr,sizeof(bufferStr),stdin);
             bufferStr[strlen(bufferStr)-1]='\0';
 

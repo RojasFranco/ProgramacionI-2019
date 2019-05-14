@@ -2,18 +2,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "utn.h"
-#include "fantasma.h" //cambiar por nombre entidad
+#include "autor.h"
+#include "libro.h"
+#include "socio.h" //cambiar por nombre entidad
 
 
 /** \brief  To indicate that all position in the array are empty,
 *          this function put the flag (isEmpty) in TRUE in all
 *          position of the array
-* \param array fantasma Array of fantasma
+* \param array socio Array of socio
 * \param size int Array length
 * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
 *
 */
-int fantasma_Inicializar(Fantasma array[], int size)                                    //cambiar fantasma
+int socio_Inicializar(Socio array[], int size)                                    //cambiar socio
 {
     int retorno=-1;
     if(array!= NULL && size>0)
@@ -21,6 +23,7 @@ int fantasma_Inicializar(Fantasma array[], int size)                            
         for(;size>0;size--)
         {
             array[size-1].isEmpty=1;
+            array[size-1].idSocio=-1;
         }
         retorno=0;
     }
@@ -31,13 +34,13 @@ int fantasma_Inicializar(Fantasma array[], int size)                            
 //Buscar
 //Int
 /** \brief Busca el primer lugar vacio en un array
-* \param array fantasma Array de fantasma
+* \param array socio Array de socio
 * \param size int Tamaño del array
 * \param posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
 * \return int Return (-1) si no encuentra un lugar vacio o Error [Invalid length or NULL pointer] - (0) si encuentra una posicion vacia
 *
 */
-int fantasma_buscarEmpty(Fantasma array[], int size, int* posicion)                    //cambiar fantasma
+int socio_buscarEmpty(Socio array[], int size, int* posicion)                    //cambiar socio
 {
     int retorno=-1;
     int i;
@@ -57,13 +60,13 @@ int fantasma_buscarEmpty(Fantasma array[], int size, int* posicion)             
 }
 
 /** \brief Busca un ID en un array y devuelve la posicion en que se encuentra
-* \param array fantasma Array de fantasma
+* \param array socio Array de socio
 * \param size int Tamaño del array
 * \param posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
 * \return int Return (-1) si no encuentra el valor buscado o Error [Invalid length or NULL pointer] - (0) si encuentra el valor buscado
 *
 */
-int fantasma_buscarID(Fantasma array[], int size, int valorBuscado, int* posicion)                    //cambiar fantasma
+int socio_buscarID(Socio array[], int size, int valorBuscado, int* posicion)                    //cambiar socio
 {
     int retorno=-1;
     int i;
@@ -73,34 +76,7 @@ int fantasma_buscarID(Fantasma array[], int size, int valorBuscado, int* posicio
         {
             if(array[i].isEmpty==1)
                 continue;
-            else if(array[i].idUnico==valorBuscado)                                                   //cambiar campo ID
-            {
-                retorno=0;
-                *posicion=i;
-                break;
-            }
-        }
-    }
-    return retorno;
-}
-/** \brief Busca un int en un array y devuelve la posicion en que se encuentra
-* \param array fantasma Array de fantasma
-* \param size int Tamaño del array
-* \param posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
-* \return int Return (-1) si no encuentra el valor buscado o Error [Invalid length or NULL pointer] - (0) si encuentra el valor buscado
-*
-*/
-int fantasma_buscarInt(Fantasma array[], int size, int valorBuscado, int* posicion)                    //cambiar fantasma
-{
-    int retorno=-1;
-    int i;
-    if(array!= NULL && size>=0)
-    {
-        for(i=0;i<size;i++)
-        {
-            if(array[i].isEmpty==1)
-                continue;
-            else if(array[i].varInt==valorBuscado)                                                   //cambiar campo varInt
+            else if(array[i].idSocio==valorBuscado)                                                   //cambiar campo ID
             {
                 retorno=0;
                 *posicion=i;
@@ -111,15 +87,16 @@ int fantasma_buscarInt(Fantasma array[], int size, int valorBuscado, int* posici
     return retorno;
 }
 
+
 //String
 /** \brief Busca un string en un array
-* \param array fantasma Array de fantasma
+* \param array socio Array de socio
 * \param size int Tamaño del array
 * \param posicion int* Puntero a la posicion del array donde se encuentra el valor buscado
 * \return int Return (-1) si no encuentra el valor buscado o Error [Invalid length or NULL pointer] - (0) si encuentra el valor buscado
 *
 */
-int fantasma_buscarString(Fantasma array[], int size, char* valorBuscado, int* indice)                    //cambiar fantasma
+int socio_buscarString(Socio array[], int size, char* valorBuscado, int* indice)                    //cambiar socio
 {
     int retorno=-1;
     int i;
@@ -129,7 +106,7 @@ int fantasma_buscarString(Fantasma array[], int size, char* valorBuscado, int* i
         {
             if(array[i].isEmpty==1)
                 continue;
-            else if(strcmp(array[i].varString,valorBuscado)==0)                                        //cambiar campo varString
+            else if(strcmp(array[i].nombre,valorBuscado)==0)                                        //cambiar campo nombre
             {
                 *indice=i;
                 retorno=0;
@@ -143,33 +120,35 @@ int fantasma_buscarString(Fantasma array[], int size, char* valorBuscado, int* i
 //*****************************************
 //Alta
 /** \brief Solicita los datos para completar la primer posicion vacia de un array
-* \param array fantasma Array de fantasma
+* \param array socio Array de socio
 * \param size int Tamaño del array
 * \param contadorID int* Puntero al ID unico que se va a asignar al nuevo elemento
 * \return int Return (-1) si Error [largo no valido o NULL pointer o no hay posiciones vacias] - (0) si se agrega un nuevo elemento exitosamente
 *
 */
-int fantasma_alta(Fantasma array[], int size, int* contadorID)                          //cambiar fantasma
+int socio_alta(Socio array[], int size, int* contadorID, Fecha fechaAsociado[], int *contadorIDFecha)                          //cambiar socio
 {
     int retorno=-1;
     int posicion;
+    char bufferSexo;
     if(array!=NULL && size>0 && contadorID!=NULL)
     {
-        if(fantasma_buscarEmpty(array,size,&posicion)==-1)                          //cambiar fantasma
+        if(socio_buscarEmpty(array,size,&posicion)==-1)                          //cambiar socio
         {
             printf("\nNo hay lugares vacios");
         }
         else
         {
             (*contadorID)++;
-            array[posicion].idUnico=*contadorID;                                                       //campo ID
+            array[posicion].idSocio=*contadorID;                                                       //campo ID
             array[posicion].isEmpty=0;
-            utn_getUnsignedInt("\ngetUnsignedInt: ","\nError",1,sizeof(int),1,10,1,&array[posicion].varInt);           //mensaje + cambiar campo varInt
-            utn_getFloat("\ngetFloat: ","\nError",1,sizeof(float),0,1,1,&array[posicion].varFloat);             //mensaje + cambiar campo varFloat
-            utn_getName("\ngetName: ","\nError",1,TEXT_SIZE,1,array[posicion].varString);                      //mensaje + cambiar campo varString
-            utn_getTexto("\ngetTexto: ","\nError",1,TEXT_SIZE,1,array[posicion].varLongString);                 //mensaje + cambiar campo varLongString
-            printf("\n Posicion: %d\n ID: %d\n varInt: %d\n varFloat: %f\n varString: %s\n varLongString: %s",
-                   posicion, array[posicion].idUnico,array[posicion].varInt,array[posicion].varFloat,array[posicion].varString,array[posicion].varLongString);
+            utn_getName("\nNombre: ","\nError",1,TEXT_SIZE,1,array[posicion].nombre);                      //mensaje + cambiar campo nombre
+            utn_getName("\nApellido: ","\nError",1,TEXT_SIZE,1,array[posicion].apellido);
+            utn_getChar("\nSexo (F/M):","Error",1, 1, 1, &array[posicion].sexo);
+            utn_getTelefono("\nTelefono:", "\nTel invalido", 1, 20, 1, 20, 1, array[posicion].telefono);
+            utn_getEmail("\nEmail: ","\nError",1,TEXT_SIZE,1,array[posicion].email);                 //mensaje + cambiar campo email
+            fecha_alta(fechaAsociado, 10, &contadorIDFecha);
+            array.fechaAsociado = fechaAsociado;
             retorno=0;
         }
     }
@@ -179,12 +158,12 @@ int fantasma_alta(Fantasma array[], int size, int* contadorID)                  
 //*****************************************
 //Baja valor unico
 /** \brief Borra un elemento del array por ID
-* \param array fantasma Array de fantasma
+* \param array socio Array de socio
 * \param size int Tamaño del array
 * \return int Return (-1) si Error [largo no valido o NULL pointer o no encuentra elementos con el valor buscado] - (0) si se elimina el elemento exitosamente
 *
 */
-int fantasma_baja(Fantasma array[], int sizeArray)                                      //cambiar fantasma
+int socio_baja(Socio array[], int sizeArray)                                      //cambiar socio
 {
     int retorno=-1;
     int posicion;
@@ -192,19 +171,19 @@ int fantasma_baja(Fantasma array[], int sizeArray)                              
     if(array!=NULL && sizeArray>0)
     {
         utn_getUnsignedInt("\nID a cancelar: ","\nError",1,sizeof(int),1,sizeArray,1,&id);          //cambiar si no se busca por ID
-        if(fantasma_buscarID(array,sizeArray,id,&posicion)==-1)                                   //cambiar si no se busca por ID
+        if(socio_buscarID(array,sizeArray,id,&posicion)==-1)                                   //cambiar si no se busca por ID
         {
             printf("\nNo existe este ID");                                                          //cambiar si no se busca por ID
         }
         else
         {
             array[posicion].isEmpty=1;
-            array[posicion].idUnico=0;                                                                   //cambiar campo id
-            array[posicion].varInt=0;                                                               //cambiar campo varInt
-            array[posicion].varFloat=0;                                                             //cambiar campo varFloat
-            strcpy(array[posicion].varString,"");                                                   //cambiar campo varString
-            strcpy(array[posicion].varLongString,"");                                               //cambiar campo varLongString
-            retorno=0;
+            /*array[posicion].idSocio=0;                                                                   //cambiar campo id
+
+
+            strcpy(array[posicion].nombre,"");                                                   //cambiar campo nombre
+            strcpy(array[posicion].email,"");                                               //cambiar campo email
+            retorno=0;*/
         }
     }
     return retorno;
@@ -212,13 +191,13 @@ int fantasma_baja(Fantasma array[], int sizeArray)                              
 
 //Baja valor repetido
 /** \brief Borra todos los elemento del array que contengan el valor buscado
-* \param array fantasma Array de fantasma
+* \param array socio Array de socio
 * \param size int Tamaño del array
 * \param valorBuscado int Valor a buscar en el array
 * \return int Return (-1) si Error [largo no valido o NULL pointer o no encuentra elementos con el valor buscado] - (0) si se elimina el elemento exitosamente
 *
 */
-int fantasma_bajaValorRepetidoInt(Fantasma array[], int sizeArray, int valorBuscado) //cuando hay que dar de baja todas las posiciones en las que se encuentra ese int
+int socio_bajaValorRepetidoInt(Socio array[], int sizeArray, int valorBuscado) //cuando hay que dar de baja todas las posiciones en las que se encuentra ese int
 {
     int retorno=-1;
     int i;
@@ -226,14 +205,14 @@ int fantasma_bajaValorRepetidoInt(Fantasma array[], int sizeArray, int valorBusc
     {
         for(i=0;i<sizeArray;i++)
         {
-            if(array[i].idUnico==valorBuscado)                                                        //cambiar si no se busca por ID
+            if(array[i].idSocio==valorBuscado)                                                        //cambiar si no se busca por ID
             {
                 array[i].isEmpty=1;
-                array[i].idUnico=0;                                                                   //cambiar campo id
-                array[i].varInt=0;                                                               //cambiar campo varInt
-                array[i].varFloat=0;                                                             //cambiar campo varFloat
-                strcpy(array[i].varString,"");                                                   //cambiar campo varString
-                strcpy(array[i].varLongString,"");                                               //cambiar campo varLongString
+                array[i].idSocio=0;                                                                   //cambiar campo id
+
+
+                strcpy(array[i].nombre,"");                                                   //cambiar campo nombre
+                strcpy(array[i].email,"");                                               //cambiar campo email
             }
         }
         retorno=0;
@@ -246,12 +225,12 @@ int fantasma_bajaValorRepetidoInt(Fantasma array[], int sizeArray, int valorBusc
 //*****************************************
 //Modificar
 /** \brief Busca un elemento por ID y modifica sus campos
-* \param array fantasma Array de fantasma
+* \param array socio Array de socio
 * \param size int Tamaño del array
 * \return int Return (-1) si Error [largo no valido o NULL pointer o no encuentra elementos con el valor buscado] - (0) si se modifica el elemento exitosamente
 *
 */
-int fantasma_modificar(Fantasma array[], int sizeArray)                                //cambiar fantasma
+int socio_modificar(Socio array[], int sizeArray)                                //cambiar socio
 {
     int retorno=-1;
     int posicion;
@@ -260,7 +239,7 @@ int fantasma_modificar(Fantasma array[], int sizeArray)                         
     if(array!=NULL && sizeArray>0)
     {
         utn_getUnsignedInt("\nID a modificar: ","\nError",1,sizeof(int),1,sizeArray,1,&id);         //cambiar si no se busca por ID
-        if(fantasma_buscarID(array,sizeArray,id,&posicion)==-1)                                   //cambiar si no se busca por ID
+        if(socio_buscarID(array,sizeArray,id,&posicion)==-1)                                   //cambiar si no se busca por ID
         {
             printf("\nNo existe este ID");                                                          //cambiar si no se busca por ID
         }
@@ -268,22 +247,25 @@ int fantasma_modificar(Fantasma array[], int sizeArray)                         
         {
             do
             {       //copiar printf de alta
-                printf("\n Posicion: %d\n ID: %d\n varInt: %d\n varFloat: %f\n varString: %s\n varLongString: %s",
-                       posicion, array[posicion].idUnico,array[posicion].varInt,array[posicion].varFloat,array[posicion].varString,array[posicion].varLongString);
-                utn_getChar("\nModificar: A B C D S(salir)","\nError",'A','Z',1,&opcion);
+                printf("\n Posicion: %d\n ID: %d\nnombre: %s\n email: %s",
+                   posicion, array[posicion].idSocio,array[posicion].nombre,array[posicion].email);
+                utn_getChar("\nModificar: A-Nombre\n B-Apellido\n C-Sexo\n D-Tel\n E-Email\n S(salir)\n","\nError",'A','Z',1,&opcion);
                 switch(opcion)
                 {
                     case 'A':
-                        utn_getUnsignedInt("\n: ","\nError",1,sizeof(int),1,1,1,&array[posicion].varInt);           //mensaje + cambiar campo varInt
+                        utn_getName("\nNombre nuevo: ","\nError",1,TEXT_SIZE,1,array[posicion].nombre);
                         break;
                     case 'B':
-                        utn_getFloat("\n: ","\nError",1,sizeof(float),0,1,1,&array[posicion].varFloat);             //mensaje + cambiar campo varFloat
+                        utn_getName("Apellido nuevo: ","\nError",1,TEXT_SIZE,1,array[posicion].apellido);
                         break;
                     case 'C':
-                        utn_getName("\n: ","\nError",1,TEXT_SIZE,1,array[posicion].varString);                      //mensaje + cambiar campo varString
+                        utn_getChar("Ingrese nuevo sexo","sexo invalido\n", 1, 2, 1, &array[posicion].sexo);
                         break;
                     case 'D':
-                        utn_getTexto("\n: ","\nError",1,TEXT_SIZE,1,array[posicion].varLongString);             //mensaje + cambiar campo varLongString
+                        utn_getTelefono("Ingrese nuevo telefono:", "tel invalido\n", 1, 20, 1, 20, 1, array[posicion].telefono);
+                        break;
+                    case 'E':
+                        utn_getTexto("Email\n: ","\nError",1,TEXT_SIZE,1,array[posicion].email);             //mensaje + cambiar campo email
                         break;
                     case 'S':
                         break;
@@ -300,7 +282,7 @@ int fantasma_modificar(Fantasma array[], int sizeArray)                         
 //*****************************************
 //Ordenar
 /** \brief Ordena por campo XXXXX los elementos de un array ante la igualdad de estos ordena por el campo ZZZZZZ
-* \param array fantasma Array de fantasma
+* \param array socio Array de socio
 * \param size int Tamaño del array
 * \param orderFirst int Determina si el orden del primer criterio es ascendete o descendente
 * \param orderSecond int Determina si el orden del segunbdo criterio es ascendete o descendente
@@ -308,11 +290,11 @@ int fantasma_modificar(Fantasma array[], int sizeArray)                         
 * \return int Return (-1) si Error [largo no valido o NULL pointer] - (0) si se ordena exitosamente
 *
 */
-int fantasma_ordenarPorDobleCriterio(Fantasma array[],int size, int orderFirst, int orderSecond)                              //cambiar fantasma
+int socio_ordenarPorDobleCriterio(Socio array[],int size, int orderFirst, int orderSecond)                              //cambiar socio
 {
     int retorno=-1;
     int i;
-    Fantasma buffer;
+    Socio buffer;
     int flagSwap;
 
     if(array!=NULL && size>=0)
@@ -320,17 +302,17 @@ int fantasma_ordenarPorDobleCriterio(Fantasma array[],int size, int orderFirst, 
         do
         {
             flagSwap=0;
-            for (i = 0; i < size-1; i++)
+            for (i = 1; i < size-1; i++)
             {
-                if( ((strcmp(array[i].varString,array[i+1].varString) < 0) && orderFirst) ||
-                    ((strcmp(array[i].varString,array[i+1].varString) > 0) && !orderFirst) )
+                if( ((strcmp(array[i].nombre,array[i+1].nombre) < 0) && orderFirst) ||
+                    ((strcmp(array[i].nombre,array[i+1].nombre) > 0) && !orderFirst) )
                 {
                     flagSwap=1;
                     buffer = array[i];
                     array[i] = array[i+1];
                     array[i+1] = buffer;
                 }
-                else if(strcmp(array[i].varString,array[i+1].varString) == 0)
+               /* else if(strcmp(array[i].nombre,array[i+1].nombre) == 0)
                 {
                     if( ((array[i].varFloat < array[i+1].varFloat) && orderSecond) ||
                         ((array[i].varFloat > array[i+1].varFloat) && !orderSecond) )
@@ -340,7 +322,7 @@ int fantasma_ordenarPorDobleCriterio(Fantasma array[],int size, int orderFirst, 
                         array[i] = array[i+1];
                         array[i+1] = buffer;
                     }
-                }
+                }*/
             }
         }while(flagSwap);
         retorno=0;
@@ -351,12 +333,12 @@ int fantasma_ordenarPorDobleCriterio(Fantasma array[],int size, int orderFirst, 
 //*****************************************
 //Listar
 /** \brief Lista los elementos de un array
-* \param array fantasma Array de fantasma
+* \param array socio Array de socio
 * \param size int Tamaño del array
 * \return int Return (-1) si Error [largo no valido o NULL pointer] - (0) si se lista exitosamente
 *
 */
-int fantasma_listar(Fantasma array[], int size)                      //cambiar fantasma
+int socio_listar(Socio array[], int size)                      //cambiar socio
 {
     int retorno=-1;
     int i;
@@ -367,12 +349,48 @@ int fantasma_listar(Fantasma array[], int size)                      //cambiar f
             if(array[i].isEmpty==1)
                 continue;
             else
-                printf("\n ID: %d\n varInt: %d\n varFloat: %f\n varString: %s\n varLongString: %s\n",
-                       array[i].idUnico,array[i].varInt,array[i].varFloat,array[i].varString,array[i].varLongString);      //cambiar todos
+                printf("\n Posicion: %d\n ID: %d\nnombre: %s\napellido:%s \nsexo:%c \nTelefono:%s \n email: %s\nFecha:%d\n",
+                   i, array[i].idSocio,array[i].nombre,array[i].apellido, array[i].sexo, array[i].telefono, array[i].email, array[i].fechaAsociado.dia);
         }
         retorno=0;
     }
     return retorno;
 }
 
+/*
+void socio_mock(Socio arraySocio[], int size,int *contadorId)                      //cambiar socio
+{
+    //*******************************************************************
+    arraySocio[0].idSocio=0;
+    arraySocio[0].isEmpty=0;
+    arraySocio[0].varInt=0;
+    arraySocio[0].varFloat=0;
+    strcpy(arraySocio[0].email,"CCCCC");
+    strcpy(arraySocio[0].nombre,"CCCCC");
+    *contadorId++;
 
+    arraySocio[1].idSocio=1;
+    arraySocio[1].isEmpty=0;
+    arraySocio[1].varInt=0;
+    arraySocio[1].varFloat=0;
+    strcpy(arraySocio[1].email,"AAAAA");
+    strcpy(arraySocio[1].nombre,"AAAAA");
+    *contadorId++;
+
+    arraySocio[2].idSocio=2;
+    arraySocio[2].isEmpty=0;
+    arraySocio[2].varInt=0;
+    arraySocio[2].varFloat=20;
+    strcpy(arraySocio[2].email,"BBBBB");
+    strcpy(arraySocio[2].nombre,"BBBBBB");
+    *contadorId++;
+
+    arraySocio[3].idSocio=3;
+    arraySocio[3].isEmpty=0;
+    arraySocio[3].varInt=0;
+    arraySocio[3].varFloat=10;
+    strcpy(arraySocio[3].email,"BBBBB");
+    strcpy(arraySocio[3].nombre,"BBBBBB");
+    contadorId++;
+}
+*/

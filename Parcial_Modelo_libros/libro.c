@@ -154,8 +154,8 @@ int libro_alta(Libro array[], Autor arrayAutor[], int sizeAutor, int size, int* 
 {
     int retorno=-1;
     int posicion;
-    int *bufferId;
-    int *posicionId;
+    int bufferId;
+    int posicionId;
     if(array!=NULL && size>0 && contadorID!=NULL)
     {
         if(libro_buscarEmpty(array,size,&posicion)==-1)                          //cambiar libro
@@ -164,18 +164,21 @@ int libro_alta(Libro array[], Autor arrayAutor[], int sizeAutor, int size, int* 
         }
         else
         {
-            (*contadorID)++;
-            array[posicion].idLibro=*contadorID;                                                       //campo ID
-            array[posicion].isEmpty=0;
             autor_listar(arrayAutor, sizeAutor);                   //cambiar
             utn_getUnsignedInt("\ngetIngrese ID autor: ","\nError",1,sizeof(int),1,10,1,&bufferId);           //mensaje + cambiar campo idAutor
-
             if(!autor_buscarID(arrayAutor, sizeAutor, bufferId, &posicionId))
             {
-                utn_getName("\ngetName: ","\nError",1,TEXT_SIZE,1,array[posicion].tituloLibro);                      //mensaje + cambiar campo tituloLibro
-                printf("\n Posicion: %d\n ID: %d\n idAutor: %d\n tituloLibro: %s\n",
-                posicion, array[posicion].idLibro,array[posicion].idAutor,array[posicion].tituloLibro);
-                retorno=0;
+                if(!utn_getTexto("\nTitulo del libro: ","\nError",1,TEXT_SIZE,1,array[posicion].tituloLibro))                      //mensaje + cambiar campo tituloLibro
+                {
+
+                    (*contadorID)++;
+                    array[posicion].idLibro=*contadorID;                                                       //campo ID
+                    array[posicion].isEmpty=0;
+                    array[posicion].idAutor=arrayAutor[posicionId].idUnico;
+                    printf("\n Posicion: %d\n ID: %d\n idAutor: %d\n tituloLibro: %s\n",
+                    posicion, array[posicion].idLibro, array[posicion].idAutor, array[posicion].tituloLibro);
+                    retorno=0;
+                }
             }
             else
             {
@@ -211,11 +214,11 @@ int libro_baja(Libro array[], int sizeArray)                                    
         else
         {
             array[posicion].isEmpty=1;
-            array[posicion].idLibro=0;                                                                   //cambiar campo id
+            /*array[posicion].idLibro=0;                                                                   //cambiar campo id
             array[posicion].idAutor=0;                                                               //cambiar campo idAutor
                                                                          //cambiar campo varFloat
             strcpy(array[posicion].tituloLibro,"");                                                   //cambiar campo tituloLibro
-                                                           //cambiar campo varLongString
+            */                                               //cambiar campo varLongString
             retorno=0;
         }
     }
@@ -263,15 +266,18 @@ int libro_bajaValorRepetidoInt(Libro array[], int sizeArray, int valorBuscado) /
 * \return int Return (-1) si Error [largo no valido o NULL pointer o no encuentra elementos con el valor buscado] - (0) si se modifica el elemento exitosamente
 *
 */
-int libro_modificar(Libro array[], int sizeArray)                                //cambiar libro
+int libro_modificar(Libro array[], Autor arrayAutor[], int sizeArrayAutor, int sizeArray)                                //cambiar libro
 {
     int retorno=-1;
     int posicion;
     int id;                                                                                         //cambiar si no se busca por ID
     char opcion;
+    int bufferIdAutor;
+    int posicionIdAutor;
     if(array!=NULL && sizeArray>0)
     {
-        utn_getUnsignedInt("\nID a modificar: ","\nError",1,sizeof(int),1,sizeArray,1,&id);         //cambiar si no se busca por ID
+        libro_listar(array, sizeArray);
+        utn_getUnsignedInt("\nID a modificar: ","Error\n",1,sizeof(int),1,sizeArray,1,&id);         //cambiar si no se busca por ID
         if(libro_buscarID(array,sizeArray,id,&posicion)==-1)                                   //cambiar si no se busca por ID
         {
             printf("\nNo existe este ID");                                                          //cambiar si no se busca por ID
@@ -281,18 +287,29 @@ int libro_modificar(Libro array[], int sizeArray)                               
             do
             {       //copiar printf de alta
                 printf("\n Posicion: %d\n ID: %d\n idAutor: %d\ntituloLibro: %s\n",
-                       posicion, array[posicion].idLibro,array[posicion].idAutor,array[posicion].tituloLibro);
-                utn_getChar("\nModificar: A B C D S(salir)","\nError",'A','Z',1,&opcion);
+                    posicion, array[posicion].idLibro,array[posicion].idAutor,array[posicion].tituloLibro);
+                utn_getChar("\nModificar: A-Id autor \nB- Titulo libro\n S(salir)\n","\nError",'A','Z',1,&opcion);
                 switch(opcion)
                 {
                     case 'A':
-                        utn_getUnsignedInt("\n: ","\nError",1,sizeof(int),1,1,1,&array[posicion].idAutor);           //mensaje + cambiar campo idAutor
+                        autor_listar(arrayAutor, sizeArrayAutor);
+                        if(!utn_getUnsignedInt("\nIngrese nuevo id de autor:","error",0,sizeof(int), 0, 10, 1, &bufferIdAutor))
+                        {
+                            if(autor_buscarID(arrayAutor, sizeArrayAutor, bufferIdAutor, &posicionIdAutor))
+                            {
+                                printf("Id de autor invalido\n");
+                            }
+                            else
+                            {
+                                array[posicion].idAutor=arrayAutor[posicionIdAutor].idUnico;
+                            }
+                        }
                         break;
                     /*case 'B':
                         utn_getFloat("\n: ","\nError",1,sizeof(float),0,1,1,&array[posicion].varFloat);             //mensaje + cambiar campo varFloat
                         break;*/
-                    case 'C':
-                        utn_getName("\n: ","\nError",1,TEXT_SIZE,1,array[posicion].tituloLibro);                      //mensaje + cambiar campo tituloLibro
+                    case 'B':
+                        utn_getTexto("Nuevo titulo: ","\nError",1,TEXT_SIZE,1,array[posicion].tituloLibro);              //mensaje + cambiar campo tituloLibro
                         break;
                     /*case 'D':
                         utn_getTexto("\n: ","\nError",1,TEXT_SIZE,1,array[posicion].varLongString);             //mensaje + cambiar campo varLongString
