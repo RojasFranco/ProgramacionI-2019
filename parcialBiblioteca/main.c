@@ -44,8 +44,8 @@ int main()
 
             case 2:
             {
-                idBuscado=autores_getById(autores, CANTIDAD_AUTORES);
-
+                idBuscado = autores_getById(autores, CANTIDAD_AUTORES);
+                printf("HOLAAAAAAA");
                 if(idBuscado>=0)
                 {
                     autores_modificar(autores, idBuscado);

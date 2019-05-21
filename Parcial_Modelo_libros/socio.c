@@ -148,7 +148,7 @@ int socio_alta(Socio array[], int size, int* contadorID, Fecha fechaAsociado[], 
             utn_getTelefono("\nTelefono:", "\nTel invalido", 1, 20, 1, 20, 1, array[posicion].telefono);
             utn_getEmail("\nEmail: ","\nError",1,TEXT_SIZE,1,array[posicion].email);                 //mensaje + cambiar campo email
             fecha_alta(fechaAsociado, 10, &contadorIDFecha);
-            array.fechaAsociado = fechaAsociado;
+            array->fechaAsociado = fechaAsociado;
             retorno=0;
         }
     }

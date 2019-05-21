@@ -71,8 +71,7 @@ int autores_getById(Autor* autores, int len)
     if(getStringNumeros(bufferId, "Ingrese ID buscado:", "ID invalido \n", 2)==0)
     {
         idBuscado=atoi(bufferId);
-        //retorno=-1;
-        printf("\n\nRETORNO: %d\n\n", retorno);
+        printf("\n\n%d\n\n", idBuscado);
         for(i=0; i<len; i++)
         {
             if(autores[i].idAutor==idBuscado)
@@ -80,15 +79,10 @@ int autores_getById(Autor* autores, int len)
                 retorno=i;
                 break;
             }
+            printf("ID no encontrado\n");
         }
-//        printf("\n\nRETORNO: %d\n\n", retorno);
-        printf("ID no encontrado\n");
+    printf("QONDAAAAAAAa");
     }
-    /*else
-    {
-        retorno=-1;
-    }*/
-    //printf("\n\nRETORNO: %d\n\n", retorno);
     return retorno;
 }
 
@@ -96,7 +90,6 @@ int autores_modificar(Autor* autores, int posicionID)
 {
    int opcionSeleccionada;
    int retorno=-1;
-
     getIntInRange(&opcionSeleccionada, "\nOpciones\n1-Modificar Nombre\n2-Modificar Apellido\n3-Salir\nopcion:", "opcion invalida\n",1,3,2);
     switch(opcionSeleccionada)
     {
@@ -117,7 +110,7 @@ int autores_modificar(Autor* autores, int posicionID)
             break;
         }
     }
-
+    return retorno;
 }
 
 int autores_baja(Autor* autores, int posicionEliminar)

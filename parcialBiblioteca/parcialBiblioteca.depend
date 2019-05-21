@@ -23,3 +23,27 @@
 
 1557438848 source:/home/alumno/ProgramacionI-2019/parcialBiblioteca/libros.c
 
+1558395587 source:/home/franco/Escritorio/ProgramacionI-2019/parcialBiblioteca/autores.c
+	<stdio.h>
+	<stdlib.h>
+	"utn_strings.h"
+	"autores.h"
+
+1557535299 /home/franco/Escritorio/ProgramacionI-2019/parcialBiblioteca/utn_strings.h
+
+1557535299 /home/franco/Escritorio/ProgramacionI-2019/parcialBiblioteca/autores.h
+
+1557535299 source:/home/franco/Escritorio/ProgramacionI-2019/parcialBiblioteca/libros.c
+
+1558395879 source:/home/franco/Escritorio/ProgramacionI-2019/parcialBiblioteca/main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn_strings.h"
+	"autores.h"
+
+1557535299 source:/home/franco/Escritorio/ProgramacionI-2019/parcialBiblioteca/utn_strings.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn_strings.h"
+

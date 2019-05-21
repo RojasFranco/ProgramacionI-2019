@@ -33,8 +33,10 @@ int getString ( char* msg,
 }
 
 
-int isValidChar(letra,minimo,maximo)
+int isValidChar(char letra,char minimo,char maximo)
 {
+    printf("\n%c\n %c \n %c \n", letra, minimo, maximo);
+
     int retorno=1;
     if(letra>=minimo && letra<=maximo)
     {
@@ -46,17 +48,18 @@ int isValidChar(letra,minimo,maximo)
 int getChar(char *mensaje, char *mensajeError, int reintentos, char minimo, char maximo, char* resultado)
 {
     char buffer[4096];
-    char* bufferLetra;
+    char bufferLetra;
     int i=0;
     int retorno=-1;
     if (mensaje!=NULL && mensajeError!=NULL && resultado!=NULL && reintentos>=0 && minimo<=maximo)
     {
         if(!getString(mensaje, mensajeError, 1, 2, reintentos, buffer))
         {
-            strcpy(&bufferLetra, buffer);
+            printf("HHHHHHHHH");
+            bufferLetra=buffer[0];
             if(!isValidChar(bufferLetra, minimo, maximo))
             {
-                strncpy(resultado, &bufferLetra, 1);
+                *resultado = bufferLetra;///strncpy(&resultado, bufferLetra, 1);
                 retorno=0;
             }
         }
