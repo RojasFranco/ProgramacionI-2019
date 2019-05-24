@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1558656143 source:/home/alumno/ProgramacionI-2019/clase13-memoriaArchivos/main.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+
+1558658419 /home/alumno/ProgramacionI-2019/clase13-memoriaArchivos/persona.h
+
+1558658830 source:/home/alumno/ProgramacionI-2019/clase13-memoriaArchivos/persona.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+	<string.h>
+
+1558646907 source:/home/alumno/ProgramacionI-2019/clase13-memoriaArchivos/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1558646907 /home/alumno/ProgramacionI-2019/clase13-memoriaArchivos/utn.h
+
