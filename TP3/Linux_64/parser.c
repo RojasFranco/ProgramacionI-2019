@@ -19,6 +19,7 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
     char auxSueldo[512];
     char auxId[512];
     int cantidadDatosLeidos;
+    int idMaximo=0;
     Employee* auxEmpleado;
     if(pFile!=NULL && pArrayListEmployee!=NULL)
     {
@@ -32,11 +33,16 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
                 if(auxEmpleado!=NULL)
                 {
                     ll_add(pArrayListEmployee, auxEmpleado);
+                    if(atoi(auxId)>idMaximo)
+                    {
+                        idMaximo = atoi(auxId);
+                    }
                 }
+                //printf("\n %s", auxEmpleado->nombre);
             }
         } while(!feof(pFile));
-
-        fclose(pFile);
+        printf("\n ASDASD:%d \n", idMaximo);
+        //setIdMaximo(idMaximo);
     }
 
 

@@ -38,14 +38,15 @@ int main()
     {
         parser_EmployeeFromText(pFile, listaEmpleados);
     }*/
-
-
+    controller_loadFromText("data.csv",listaEmpleados);
     do{
         switch(option)
         {
             case 1:
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
+            case 6:
+                controller_loadFromBinary("data.bin", listaEmpleados);
         }
     }while(option != 10);
     return 0;

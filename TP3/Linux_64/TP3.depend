@@ -89,3 +89,49 @@
 
 1533133022 /home/alumno/ProgramacionI-2019/TP3/Linux_64/parser.h
 
+1559868374 source:/home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"utn.h"
+
+1559863817 /home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/LinkedList.h
+
+1559860342 /home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/Employee.h
+
+1559869169 source:/home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/Employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1559856767 /home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/Controller.h
+
+1559865202 source:/home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"parser.h"
+
+1559856767 /home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/parser.h
+
+1559864893 source:/home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559856767 source:/home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1559856767 /home/alumno/aaaa/ProgramacionI-2019/TP3/Linux_64/utn.h
+

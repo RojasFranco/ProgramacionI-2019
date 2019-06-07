@@ -5,6 +5,17 @@
 #include "Controller.h"
 #include "Employee.h"
 
+/*static int idEmpleado=0;
+static int employee_generarId(void)
+{
+    return idEmpleado++;
+}
+
+static void setIdMaximo(int valorId)
+{
+    idEmpleado = valorId;
+}
+*/
 Employee* employee_new(void)
 {
     return (Employee*) malloc(sizeof(Employee));
@@ -133,3 +144,31 @@ int employee_getSueldo(Employee* this,int* sueldo)
     }
     return retorno;
 }
+
+
+int employee_compararPorNombre(void* thisUno, void* thisDos)
+{
+    int retorno;
+    char auxStrA[4096];
+    char auxStrB[4096];
+    employee_getNombre((Employee*)thisUno, auxStrA);
+    employee_getNombre((Employee*)thisDos, auxStrB);
+    if(strcmp(auxStrA, auxStrB)>0)
+    {
+        retorno=1;
+    }
+    else if(strcmp(auxStrA, auxStrB)<0)
+    {
+        retorno = -1;
+    }
+    else
+    {
+        retorno=0;
+    }
+
+
+    return retorno;
+}
+
+
+//int employee_getIdMax()
