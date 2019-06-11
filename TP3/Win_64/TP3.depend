@@ -53,3 +53,51 @@
 	"LinkedList.h"
 	"Employee.h"
 
+1560219092 source:c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"utn.h"
+	"Controller.h"
+
+1560036126 c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\linkedlist.h
+
+1560221165 c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\employee.h
+
+1560221148 source:c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"utn.h"
+
+1560217804 source:c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"utn.h"
+
+1560121368 c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\controller.h
+
+1560221148 source:c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1560036126 c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\parser.h
+
+1560036123 c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\utn.h
+
+1560103227 source:c:\users\franco rojas\desktop\programacioni-2019\tp3\win_64\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
