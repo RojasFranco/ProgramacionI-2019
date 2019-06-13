@@ -85,8 +85,8 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     if(pArrayListEmployee!=NULL)
     {
         if( !utn_getName("\nIngrese nombre: ", "\nNombre invalido", 1,MAX_NOMBRE, reintentos, buffeNombre) &&
-            !utn_getUnsignedInt("\nIngrese hs trabajadas: ", "\nDato invalido", 1, sizeof(int), 1, MAX_HS, 2, &bufferHorasTrabajadas) &&
-            !utn_getUnsignedInt("\nIngrese sueldo: ", "\ndato invalido", 1, sizeof(int), 1, MAX_SUELDO, 2, &bufferSueldo) )
+            !utn_getUnsignedInt("\nIngrese hs trabajadas: ", "\nDato invalido", 1, 4, 1, MAX_HS, 2, &bufferHorasTrabajadas) &&
+            !utn_getUnsignedInt("\nIngrese sueldo: ", "\ndato invalido", 1, 6, 1, MAX_SUELDO, 2, &bufferSueldo) )
         {
             id = controller_IdMaximo(pArrayListEmployee)+1;
             sprintf(idStr, "%d", id);
@@ -129,7 +129,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
     if(pArrayListEmployee!=NULL)
     {
         controller_ListEmployee(pArrayListEmployee);
-        utn_getUnsignedInt("\nIngrese id del empleado a modificar: ", "\n Dato invalido", 1, sizeof(int),1,MAX_ID, 2, &idBuscado);
+        utn_getUnsignedInt("\nIngrese id del empleado a modificar: ", "\n Dato invalido", 1, 5,1,MAX_ID, 2, &idBuscado);
         posicionEmpleado = controller_buscarId(pArrayListEmployee, idBuscado);
         if(posicionEmpleado != -1)
         {
@@ -186,7 +186,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
     if(pArrayListEmployee!=NULL)
     {
         controller_ListEmployee(pArrayListEmployee);
-        utn_getUnsignedInt("\n Ingrese id a eliminar:", "\nDato invalido", 1, sizeof(int), 1, MAX_ID, 2, &idEliminar);
+        utn_getUnsignedInt("\n Ingrese id a eliminar:", "\nDato invalido", 1, 5, 1, MAX_ID, 2, &idEliminar);
         posicionId = controller_buscarId(pArrayListEmployee, idEliminar);
         if(posicionId!=-1)
         {
@@ -253,6 +253,7 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
     if(pArrayListEmployee!=NULL)
     {
         ///ll_sort(pArrayListEmployee, )     aplicar ordenamiento por puntero funcion.-
+        ll_sort(pArrayListEmployee, employee_compararPorNombre, 1);
         retorno=0;
     }
     return retorno;
