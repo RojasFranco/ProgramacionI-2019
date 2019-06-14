@@ -277,9 +277,9 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
     int bufferId;
     int bufferHorasTrabajadas;
     int bufferSueldo;
-    lenArray = ll_len(pArrayListEmployee);
     if(path!=NULL && pArrayListEmployee!=NULL)
     {
+        lenArray = ll_len(pArrayListEmployee);
         pFile = fopen(path, "w");
         if(pFile!=NULL)
         {
@@ -313,9 +313,9 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
     Employee* auxEmpleado;
     int i;
     int lenArray;
-    lenArray = ll_len(pArrayListEmployee);
     if(path!=NULL && pArrayListEmployee!=NULL)
     {
+        lenArray = ll_len(pArrayListEmployee);
         pFile = fopen(path, "wb");
         if(pFile!=NULL)
         {
