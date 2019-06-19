@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1560904949 source:/home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1560894034 /home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/LinkedList.h
+
+1560905283 source:/home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/Empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Empleado.h"
+	"utn.h"
+
+1560903592 /home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/Empleado.h
+
+1560894034 /home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/utn.h
+
+1560894034 source:/home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1560905283 source:/home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"LinkedList.h"
+	"Parser.h"
+
+1560903230 /home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/Parser.h
+	"LinkedList.h"
+
+1560903599 source:/home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/Parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Empleado.h"
+
+1560904591 source:/home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Empleado.h"
+	"utn.h"
+	"Controller.h"
+
+1560894034 /home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/Controller.h
+

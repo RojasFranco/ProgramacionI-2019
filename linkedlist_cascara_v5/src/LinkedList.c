@@ -371,7 +371,7 @@ int ll_clear(LinkedList* this)
         {
             //nodoAuxiliarLiberar = getNode(this, 0);
             ll_remove(this, 0);
-        } while(ll_len(this)>0); ///nodoAuxiliarLiberar!=NULL
+        } while(ll_len(this)>0); ///nodoAuxiliarLiberar!=NULL no valido
 
         returnAux=0;
     }
@@ -642,3 +642,93 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 
 }
 
+
+/**
+crea sublista donde se agregan los elementos que estan en this modificados por pFunc
+*/
+LinkedList* ll_map(LinkedList* this, int (*pFunc)(void*))
+{
+    LinkedList* retorno = NULL;
+    int i;
+    int lenArray;
+    void* pElementoAuxiliar;
+    if(this!=NULL && pFunc!=NULL)
+    {
+        retorno = ll_newLinkedList();
+        lenArray = ll_len(this);
+        for(i=0; i<lenArray; i++)
+        {
+            pElementoAuxiliar = ll_get(this, i);
+            if(pFunc(pElementoAuxiliar)) //si no da error
+            {
+                ll_add(retorno, pElementoAuxiliar);
+            }
+        }
+    }
+    return retorno;
+}
+
+
+/****
+recorre this y crea sublista con los elementos que cumplen la funcion pFunc
+****/
+LinkedList* ll_filter(LinkedList* this, int(*pFunc)(void*))
+{
+    LinkedList* retorno=NULL;
+    int i;
+    int lenArray;
+    void* pElementoAuxiliar;
+    if(this!=NULL && pFunc!=NULL)
+    {
+        retorno = ll_newLinkedList();
+        lenArray = ll_len(this);
+        for(i=0; i<lenArray; i++)
+        {
+            pElementoAuxiliar = ll_get(this, i);
+            if(pFunc(pElementoAuxiliar))
+            {
+                ll_add(retorno, pElementoAuxiliar);
+            }
+        }
+    }
+    return retorno; //Obs: en caso de no agregar ningun elemento devuelvo puntero a la lista vacia(no la elimino).-
+}
+
+
+/****
+recorre la lista y elimina los elementos que cumplen la funcion pFunc devolviendo la misma lista modificada
+****/
+LinkedList* ll_reduce(LinkedList* this, int (*pFunc)(void*))
+{
+    //int i;
+    //int lenArray;
+    void* pElementoAuxiliar;
+    int i;
+    if(this!=NULL && pFunc!=NULL)
+    {
+        for(i=0; i<ll_len(this); i++)
+        {
+            pElementoAuxiliar = ll_get(this, i);
+            if(pFunc(pElementoAuxiliar))
+            {
+                ll_remove(this, i);
+                i-=1;
+            }
+        }
+        /*
+        do
+        {
+            indiceRecorrido=0;
+            pElementoAuxiliar = ll_get(this, indiceRecorrido);
+            if(pFunc(pElementoAuxiliar))
+            {
+                ll_remove(this, indiceRecorrido);
+            }
+            indiceRecorrido+=1;
+        }while(indiceRecorrido!=(lenArray-1));
+        */
+    }
+    //return this;
+    return this;
+
+}
