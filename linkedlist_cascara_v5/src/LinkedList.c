@@ -701,13 +701,14 @@ LinkedList* ll_filter(LinkedList* this, int(*pFunc)(void*))
 /****
 recorre la lista y elimina los elementos que cumplen la funcion pFunc devolviendo la misma lista modificada
 ****/
-LinkedList* ll_reduce(LinkedList* this, int (*pFunc)(void*))
+int ll_reduce(LinkedList* this, int (*pFunc)(void*))
 {
-
+    int retorno=-1;
     void* pElementoAuxiliar;
     int i;
     if(this!=NULL && pFunc!=NULL)
     {
+        retorno=0;
         for(i=0; i<ll_len(this); i++)
         {
             pElementoAuxiliar = ll_get(this, i);
@@ -718,5 +719,5 @@ LinkedList* ll_reduce(LinkedList* this, int (*pFunc)(void*))
             }
         }
     }
-    return this;
+    return retorno;
 }
