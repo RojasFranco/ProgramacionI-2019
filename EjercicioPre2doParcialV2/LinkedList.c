@@ -648,19 +648,21 @@ crea sublista donde se agregan los elementos que estan en this modificados por p
 */
 LinkedList* ll_map(LinkedList* this, int (*pFunc)(void*))
 {
-    LinkedList* retorno = NULL;
+    //LinkedList* retorno = NULL;
+    int retorno=-1;
     int i;
     int lenArray;
     void* pElementoAuxiliar;
     if(this!=NULL && pFunc!=NULL)
     {
-        retorno = ll_newLinkedList();
+        //retorno = ll_newLinkedList();
         lenArray = ll_len(this);
+        retorno=0;
         for(i=0; i<lenArray; i++)
         {
             pElementoAuxiliar = ll_get(this, i);
             pFunc(pElementoAuxiliar);
-            ll_add(retorno, pElementoAuxiliar);
+            //ll_add(retorno, pElementoAuxiliar);
         }
     }
     return retorno;

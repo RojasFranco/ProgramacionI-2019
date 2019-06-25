@@ -183,18 +183,42 @@ int employee_compararPorNombre(void* thisUno, void* thisDos)
     return retorno;
 }
 
-
+/**
+    Realizar un programa que lee de un archivo los datos de empleados y los guarda en un arraylist de entidades
+    empleado.
+    Luego, debera calcular el campo "sueldo" de cada uno de los empleados leidos, segun la horas que trabajaron, con el
+    siguiente criterio:
+    Los valores de horas varian entre 80 y 240.
+    - Las primeras 120 horas la hora vale $180
+    - De 120 a 160 horas, la hora vale $240
+    - De 160 a 240 horas, la hora vale $350*/
 void em_calcularSueldo(void* p)
 {
-    void* retorno=NULL;
+    //int retorno=-1;
+    Employee* pEmpleado = (Employee*)p;
+    int bufferHorasTrabajadas;
+    int horasEntre120y160;
+    int horasEntre160y240;
+    int totalSueldo;
     if(p!=NULL)
     {
-        if(atoi(p)<120)
+        employee_getHorasTrabajadas(pEmpleado, &bufferHorasTrabajadas);
+        //retorno=0;
+        if(bufferHorasTrabajadas<=120)
         {
-
+            totalSueldo = bufferHorasTrabajadas*180;
         }
-
-
+        else if(bufferHorasTrabajadas<=160)
+        {
+            horasEntre120y160 = bufferHorasTrabajadas-120;
+            totalSueldo = horasEntre120y160*240 + 120*180;
+        }
+        else
+        {
+            horasEntre160y240 = bufferHorasTrabajadas - 160;
+            totalSueldo = 120*180 + 40*240 + horasEntre160y240*350;
+        }
+        employee_setSueldo(pEmpleado, totalSueldo);;
     }
-    return retorno;
+    //return retorno;
 }

@@ -51,3 +51,56 @@
 
 1560894034 /home/alumno/ProgramacionI-2019/EjercicioPre2doParcialV2/Controller.h
 
+1561431708 source:/home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/Empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Empleado.h"
+	"utn.h"
+
+1561339249 /home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/LinkedList.h
+
+1561339249 /home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/Empleado.h
+
+1561339249 /home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/utn.h
+
+1561414792 source:/home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1561433198 source:/home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"LinkedList.h"
+	"Parser.h"
+	"Controller.h"
+
+1561339249 /home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/Parser.h
+	"LinkedList.h"
+
+1561339249 source:/home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/Parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Empleado.h"
+
+1561339249 source:/home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1561431842 source:/home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Empleado.h"
+	"utn.h"
+	"Controller.h"
+
+1561339249 /home/franco/Escritorio/ProgramacionI-2019/EjercicioPre2doParcialV2/Controller.h
+

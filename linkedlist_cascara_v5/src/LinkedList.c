@@ -644,25 +644,28 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 
 
 /**
-crea sublista donde se agregan los elementos que estan en this modificados por pFunc
+se modifican elementos de this segun criterio de la funcion pFunc
 */
-LinkedList* ll_map(LinkedList* this, int (*pFunc)(void*))
+int ll_map(LinkedList* this, int (*pFunc)(void*))
 {
-    LinkedList* retorno = NULL;
+    //LinkedList* retorno = NULL;
+    int retorno=-1;
     int i;
     int lenArray;
     void* pElementoAuxiliar;
     if(this!=NULL && pFunc!=NULL)
     {
-        retorno = ll_newLinkedList();
+        //retorno = ll_newLinkedList();
+        retorno=0;
         lenArray = ll_len(this);
         for(i=0; i<lenArray; i++)
         {
             pElementoAuxiliar = ll_get(this, i);
-            if(pFunc(pElementoAuxiliar)) //si no da error
+            pFunc(pElementoAuxiliar);
+            /*if(pFunc(pElementoAuxiliar)) //si no da error
             {
                 ll_add(retorno, pElementoAuxiliar);
-            }
+            }*/
         }
     }
     return retorno;
@@ -700,8 +703,7 @@ recorre la lista y elimina los elementos que cumplen la funcion pFunc devolviend
 ****/
 LinkedList* ll_reduce(LinkedList* this, int (*pFunc)(void*))
 {
-    //int i;
-    //int lenArray;
+
     void* pElementoAuxiliar;
     int i;
     if(this!=NULL && pFunc!=NULL)
@@ -715,20 +717,6 @@ LinkedList* ll_reduce(LinkedList* this, int (*pFunc)(void*))
                 i-=1;
             }
         }
-        /*
-        do
-        {
-            indiceRecorrido=0;
-            pElementoAuxiliar = ll_get(this, indiceRecorrido);
-            if(pFunc(pElementoAuxiliar))
-            {
-                ll_remove(this, indiceRecorrido);
-            }
-            indiceRecorrido+=1;
-        }while(indiceRecorrido!=(lenArray-1));
-        */
     }
-    //return this;
     return this;
-
 }

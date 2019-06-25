@@ -229,10 +229,10 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
             auxEmpleado = ll_get(pArrayListEmployee, i);
             if(!employee_getId(auxEmpleado, &bufferId) &&
                !employee_getNombre(auxEmpleado, bufferNombre) &&
-               !employee_getHorasTrabajadas(auxEmpleado, &bufferHorasTrabajadas) )//&&
-               //!employee_getSueldo(auxEmpleado,&bufferSueldo))
+               !employee_getHorasTrabajadas(auxEmpleado, &bufferHorasTrabajadas) &&
+               !employee_getSueldo(auxEmpleado,&bufferSueldo))
             {
-                printf("\n ID:%d - Nombre:%s - HorasTrabajadas:%d ", bufferId, bufferNombre, bufferHorasTrabajadas);//, bufferSueldo);
+                printf("\n ID:%d - Nombre:%s - HorasTrabajadas:%d ", bufferId, bufferNombre, bufferHorasTrabajadas, bufferSueldo);
             }
         }
         retorno=0;

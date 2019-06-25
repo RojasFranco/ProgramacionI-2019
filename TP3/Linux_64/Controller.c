@@ -216,5 +216,6 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
     }
     retorno=0;
     return retorno;*/
+    return 1;
 }
 
