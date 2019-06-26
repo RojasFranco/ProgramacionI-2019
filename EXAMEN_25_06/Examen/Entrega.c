@@ -17,13 +17,12 @@ Entrega* entrega_newParametros(char* idStr,char* tipoStr,char* cantidadStr, char
     Entrega* pAuxEmpleado;
     Entrega* retorno=NULL;
     pAuxEmpleado = entrega_new();
-
     if(pAuxEmpleado!=NULL && idStr!=NULL && tipoStr!=NULL && cantidadStr!=NULL && importeStr!=NULL)
     {
         if( isValidNumber(idStr) && !entrega_setId(pAuxEmpleado, atoi(idStr)) &&
             !entrega_setTipo(pAuxEmpleado, tipoStr)&&
             isValidNumber(cantidadStr) && !entrega_setCantidad(pAuxEmpleado, atoi(cantidadStr)) &&
-            isValidNumber(importeStr) && !entrega_setImporte(pAuxEmpleado, atoi(importeStr)) )
+            isValidFloatNumber(importeStr) && !entrega_setImporte(pAuxEmpleado, atof(importeStr)) )
         {
             retorno = pAuxEmpleado;
         }
@@ -33,11 +32,10 @@ Entrega* entrega_newParametros(char* idStr,char* tipoStr,char* cantidadStr, char
             entrega_delete(pAuxEmpleado);
         }
     }
-
     return retorno;
 }
 
-Entrega* entrega_newParametrosBin(int id, char* tipoStr, int cantidad, int importe)
+Entrega* entrega_newParametrosBin(int id, char* tipoStr, int cantidad, float importe)
 {
     Entrega* pEmpleado;
     Entrega* retorno=NULL;
@@ -135,10 +133,10 @@ int entrega_getCantidad(Entrega* this,int* cantidad)
 }
 
 
-int entrega_setImporte(Entrega* this,int importe)
+int entrega_setImporte(Entrega* this,float importe)
 {
     int retorno=-1;
-    if(this!=NULL && importe>=0)
+    if(this!=NULL)
     {
         this->importe = importe;
         retorno=0;
@@ -147,7 +145,7 @@ int entrega_setImporte(Entrega* this,int importe)
 }
 
 
-int entrega_getImporte(Entrega* this,int* importe)
+int entrega_getImporte(Entrega* this,float* importe)
 {
     int retorno=-1;
     if(this!=NULL && importe!=NULL)

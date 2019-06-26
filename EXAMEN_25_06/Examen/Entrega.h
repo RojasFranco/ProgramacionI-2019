@@ -10,7 +10,7 @@ typedef struct
 
 Entrega* entrega_new();
 Entrega* entrega_newParametros(char* idStr,char* tipoStr,char* cantidadStr, char*importeStr);
-Entrega* entrega_newParametrosBin(int id, char* tipoStr, int cantidad, int importe);
+Entrega* entrega_newParametrosBin(int id, char* tipoStr, int cantidad, float importe);
 void entrega_delete(Entrega* this);
 
 int entrega_setId(Entrega* this,int id);
@@ -24,8 +24,9 @@ int entrega_setCantidad(Entrega* this,int cantidad);
 int entrega_getCantidad(Entrega* this,int* cantidad);
 //int entrega_setCantidadStr(Entrega* this, char* cantidadStr);
 
-int entrega_setImporte(Entrega* this,int importe);
-int entrega_getImporte(Entrega* this,int* importe);
+int entrega_setImporte(Entrega* this,float importe);
+int entrega_getImporte(Entrega* this,float* importe);
+
 int entrega_compararPorTipo(void* thisUno, void* thisDos);
 
 #endif // entrega_H_INCLUDED

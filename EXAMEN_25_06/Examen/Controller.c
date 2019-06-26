@@ -220,7 +220,7 @@ int controller_ListEntrega(LinkedList* pArrayListEntrega)
     int bufferId;
     char bufferTipo[512];
     int bufferCantidad;
-    int bufferImporte;
+    float bufferImporte;
     lenArray = ll_len(pArrayListEntrega);
     if(pArrayListEntrega!=NULL)
     {
@@ -232,8 +232,7 @@ int controller_ListEntrega(LinkedList* pArrayListEntrega)
                !entrega_getCantidad(auxEmpleado, &bufferCantidad) &&
                !entrega_getImporte(auxEmpleado,&bufferImporte))
             {
-                printf("\n\n PP\n");
-                printf("\n ID:%d - Tipo:%s - Cantidad:%d - Importe:%d", bufferId, bufferTipo, bufferCantidad, bufferImporte);
+                printf("\n ID:%d - Tipo:%s - Cantidad:%d - Importe:%f", bufferId, bufferTipo, bufferCantidad, bufferImporte);
             }
         }
         retorno=0;
@@ -277,7 +276,7 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEntrega)
     char bufferTipo[512];
     int bufferId;
     int bufferCantidad;
-    int bufferImporte;
+    float bufferImporte;
     if(path!=NULL && pArrayListEntrega!=NULL)
     {
         lenArray = ll_len(pArrayListEntrega);
@@ -291,7 +290,7 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEntrega)
                 entrega_getCantidad(auxEmpleado, &bufferCantidad);
                 entrega_getImporte(auxEmpleado, &bufferImporte);
                 entrega_getTipo(auxEmpleado, bufferTipo);
-                fprintf(pFile , "%d, %s, %d, %d\n", bufferId, bufferTipo, bufferCantidad, bufferImporte);
+                fprintf(pFile , "%d, %s, %d, %f\n", bufferId, bufferTipo, bufferCantidad, bufferImporte);
             }
             retorno=0;
         }

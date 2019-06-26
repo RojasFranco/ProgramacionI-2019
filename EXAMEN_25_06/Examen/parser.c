@@ -32,9 +32,11 @@ int parser_EntregaFromText(FILE* pFile , LinkedList* pArrayListEntrega)
                 auxEmpleado = entrega_newParametros(bufferId, bufferTipo, bufferCantidad, bufferImporte);
                 if(auxEmpleado!=NULL)
                 {
+                    //printf("\n%s", bufferTipo);
                     ll_add(pArrayListEntrega, auxEmpleado);
+                    //printf("\n%d", bufferImporte);
+
                 }
-                //printf("\n%s", bufferImporte);
             }
         }while(!feof(pFile));
     }

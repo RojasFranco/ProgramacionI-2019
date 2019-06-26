@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1561501346 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/Controller.c
+1561505726 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/Controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -10,7 +10,7 @@
 
 1561499052 /home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/LinkedList.h
 
-1561501053 /home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/Entrega.h
+1561503632 /home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/Entrega.h
 
 1561500583 /home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/parser.h
 
@@ -18,11 +18,11 @@
 
 1561500473 /home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/Controller.h
 
-1561500060 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/LinkedList.c
+1561499052 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/LinkedList.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	"LinkedList.h"
+	"../inc/LinkedList.h"
 
 1561499052 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/utn.c
 	<stdio.h>
@@ -30,7 +30,7 @@
 	<string.h>
 	"utn.h"
 
-1561501322 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/main.c
+1561506918 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -38,14 +38,15 @@
 	"parser.h"
 	"utn.h"
 	"Controller.h"
+	"informe.h"
 
-1561500901 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/parser.c
+1561504256 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Entrega.h"
 
-1561500970 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/Entrega.c
+1561505726 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/Entrega.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -53,4 +54,16 @@
 	"Controller.h"
 	"Entrega.h"
 	"utn.h"
+
+1561506945 source:/home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/informe.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Entrega.h"
+	"parser.h"
+	"utn.h"
+	"Controller.h"
+	"informe.h"
+
+1561506032 /home/alumno/ProgramacionI-2019/EXAMEN_25_06/Examen/informe.h
 
