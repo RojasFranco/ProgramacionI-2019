@@ -148,3 +148,56 @@
 	<string.h>
 	"utn.h"
 
+1561517497 source:/home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"entregas.h"
+	"parser.h"
+	"utn.h"
+
+1561517497 /home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/LinkedList.h
+
+1561517497 /home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/entregas.h
+
+1561517497 /home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/parser.h
+
+1561517497 /home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/utn.h
+
+1561517497 source:/home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/entregas.c
+	<stdio.h>
+	<stdlib.h>
+	"entregas.h"
+	"utn.h"
+	<string.h>
+
+1561517497 source:/home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1561517497 source:/home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"entregas.h"
+	"utn.h"
+
+1561517497 /home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/Controller.h
+	"entregas.h"
+
+1561517497 source:/home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"entregas.h"
+
+1561517497 source:/home/franco/Escritorio/ProgramacionI-2019/Segundo Parcial - Rolon Ignacio/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio_ext.h>
+	<string.h>
+	"utn.h"
+
