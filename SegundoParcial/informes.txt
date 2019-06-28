@@ -1,0 +1,8 @@
+*****************************
+Informe de Ventas
+*****************************
+Cantidad Fotos Totales: 48301
+Ventas mayor 150: 466
+Ventas mayor 300: 444
+Cantidad fotos Polaroids: 171
+*****************************
