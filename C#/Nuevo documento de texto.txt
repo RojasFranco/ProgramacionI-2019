@@ -1,0 +1,60 @@
+using System;
+					
+
+
+
+namespace ParcialOrquesta
+{
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			Orquesta orquesta1 = new Orquesta();
+			orquesta1.ImprimirOrquesta();
+			Orquesta orquesta2= new Orquesta("Orquesta 2", "LugarS", "Sinfonica");
+			orquesta2.ImprimirOrquesta();
+		}
+	}
+}
+
+
+
+namespace ParcialOrquesta
+{
+	class Orquesta
+	{
+		public string nombre;
+		public string lugar;
+		public string tipoOrquesta;
+		
+		public Orquesta() {
+			this.nombre	= " no tiene ningun nombre";
+			this.lugar = "no tiene lugar";
+			this.tipoOrquesta = "no tiene cargado ningun tipo";
+		}	
+		
+		public Orquesta(string nombre, string lugar, string tipo){
+			this.nombre = nombre;
+			this.lugar = lugar;
+			this.tipoOrquesta = tipo;		
+		}
+		public void ImprimirOrquesta(){
+			Console.WriteLine("Nombre {0}, Lugar {1}, Tipo{2} ", this.nombre, this.lugar, this.tipoOrquesta);
+			Console.ReadLine();
+		}
+	}
+}
+
+ArrayList listaOrquesta = new ArrayList();
+listaOrquesta.
+namespace ParcialOrquesta
+{
+	class Musico
+	{
+		
+	
+	
+	
+	}
+
+}
