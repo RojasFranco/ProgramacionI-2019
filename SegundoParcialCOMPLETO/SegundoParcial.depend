@@ -1,0 +1,115 @@
+# depslib dependency file v1.0
+1561683184 source:/home/alumno/Escritorio/RojasFranco/SegundoParcial/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"ventas.h"
+	"parser.h"
+	"utn.h"
+	"Controller.h"
+
+1561679142 /home/alumno/Escritorio/RojasFranco/SegundoParcial/LinkedList.h
+
+1561671395 /home/alumno/Escritorio/RojasFranco/SegundoParcial/Employee.h
+
+1561672413 /home/alumno/Escritorio/RojasFranco/SegundoParcial/parser.h
+
+1561671395 /home/alumno/Escritorio/RojasFranco/SegundoParcial/utn.h
+
+1561679374 /home/alumno/Escritorio/RojasFranco/SegundoParcial/Controller.h
+
+1561680607 source:/home/alumno/Escritorio/RojasFranco/SegundoParcial/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"ventas.h"
+	"utn.h"
+
+1561681276 source:/home/alumno/Escritorio/RojasFranco/SegundoParcial/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+
+1561682443 source:/home/alumno/Escritorio/RojasFranco/SegundoParcial/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"ventas.h"
+
+1561683085 source:/home/alumno/Escritorio/RojasFranco/SegundoParcial/ventas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"ventas.h"
+	"utn.h"
+
+1561682239 /home/alumno/Escritorio/RojasFranco/SegundoParcial/ventas.h
+
+1561671395 source:/home/alumno/Escritorio/RojasFranco/SegundoParcial/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1562025148 source:c:\users\franco rojas\desktop\segundoparcial\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"ventas.h"
+	"parser.h"
+	"utn.h"
+	"Controller.h"
+
+1562009902 c:\users\franco rojas\desktop\segundoparcial\linkedlist.h
+
+1562009902 c:\users\franco rojas\desktop\segundoparcial\ventas.h
+
+1562009902 c:\users\franco rojas\desktop\segundoparcial\parser.h
+
+1562009902 c:\users\franco rojas\desktop\segundoparcial\utn.h
+
+1562009902 c:\users\franco rojas\desktop\segundoparcial\controller.h
+
+1562025196 source:c:\users\franco rojas\desktop\segundoparcial\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+
+1562025811 source:c:\users\franco rojas\desktop\segundoparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"ventas.h"
+	"utn.h"
+
+1562025317 source:c:\users\franco rojas\desktop\segundoparcial\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"ventas.h"
+
+1562009902 source:c:\users\franco rojas\desktop\segundoparcial\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1562009902 source:c:\users\franco rojas\desktop\segundoparcial\ventas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"ventas.h"
+	"utn.h"
+
